@@ -1,0 +1,26 @@
+header{
+    color: black;
+    background-color: rgb(41, 178, 224);
+    text-align: center;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav li{
+    list-style-type: none;
+    padding: 0;
+}
+nav li{
+    display: inline;
+    margin-right: 10px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.informações{
+    text-align: justify;
+}
