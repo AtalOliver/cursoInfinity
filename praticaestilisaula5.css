@@ -1,0 +1,30 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color: black;
+    color: beige;
+}
+.img-logo{
+    display: inline-block;
+    width: 300px;
+
+}
+main{
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid red;
+  text-align: center; 
+}
+.info{
+    display: inline-block;
+    width: 300px;   
+}
+.centralizar{
+    text-align: center;
+}
+.nomeempresa{
+    text-align: center;
+}
