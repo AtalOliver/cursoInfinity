@@ -1,0 +1,16 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+}
+.top-logo{ width: 40%;
+    background-color: rgb(24, 148, 176);
+color: bisque;
+}
+nav{
+    background-color: burlywood;
+    justify-content: space-evenly;
+    width: 40%;
+}
