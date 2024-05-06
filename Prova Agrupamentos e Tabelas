@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Agrupamento e tabelas</title>
+    <link rel="stylesheet" href="provaagrupamentos.css">
+
+</head>
+<body>
+    <header>
+        <h1>Portal Alunos Infinity</h1> 
+<form action="#" method="post">
+    <label for="name">Nome</label><br>
+    <input type="text" id="Name"> <br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <input type="submit" value="Enviar"><br>
+    <br>
+    <li> <a href="https://support.google.com/accounts/answer/7682439?hl=pt-BR">Esqueci a Senha</a></li>
+</form>
+  
+    </header>
+   <style>
+    body{background-color:red;}
+   </style>
+</body>
+</html>
