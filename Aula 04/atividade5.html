@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="Entada"/>
+        <input type="button" id="btn" value="Ação" onclick="Execultar()"/>
+    </div>
+    <div id="Resultado"> O resultado estará aqui</div>
+
+    <script>
+        function execultar() {
+            
+        }
+    //desativei para fazer o teste com o imput e div    let numero = parseInt( prompt(" Informe um número: "));
+        let numero = document.getElementById('entrada').value;
+        numero = parseInt
+
+        let div = document.getElementById('Resultado')
+        let mensagem = 'O número é par' 
+        if ( numero % 2 == 1)
+        mensagem = 'O número ${numero} é impar'
+        div.innerHTML = mensagem;
+
+ //(forma resumida do codigo)  div.innerHTML = numero % 2 == 1 ? ' O número ${numero} é impar' : 'O numero ${numero} é par';
+    </script>
+</body>
+</html>
