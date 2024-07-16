@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Palavras</title>
+</head>
+<body>
+  <h1>Contador de Vogais</h1> 
+  <div>
+    <input type="text" id="palavra">
+    <button onclick="BtnContarVogaisOnclick()">Contar Vogais</button> <br>
+    <div id="resultado"></div>
+  </div>
+    
+    <script>
+        function BtnContarVogaisOnclick(){
+            let palavra = document.getElementById('palavra').value;
+            let qtd_vogais = contar_vogais(palavra);
+            document.getElementById('resultado').innerHTML = qtd_vogais;
+        }
+
+        function contar_vogais(palavras){
+            let contador = 0
+            for (letra of palavras) {
+                if ("aeiou".includes(letra)){
+                    contador++;
+                }
+                
+            }
+            return contador;
+        }
+        
+        
+        
+
+    </script>
+</body>
+</html>

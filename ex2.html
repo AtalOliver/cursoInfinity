@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+    function gerar_funcao(x){
+        return function (a) {return x * a};
+    }
+     const dobro = gerar_funcao(2)
+     const triplo = gerar_funcao(3)
+     console.log(dobro * 10)
+
+    </script>
+</body>
+</html>

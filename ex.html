@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador frase Camisa</title>
+</head>
+<body>
+    <h1>Gerador de frases para camisas</h1>
+ <div >
+
+    <div id="frase">Clique no botão para gerar uma frase top</div>
+    <button onclick="BtnSortearOnclick()">Gerar Frase</button>
+ </div>
+    
+
+
+    <script>
+        const palavras = [ "Wave" , "Sea" , "Sun", "Beach", "Fatal", "Coast", "Island", "Cyclone", "Summer", "Minds"]
+
+    function sorteia_frase(){
+        let indice_1 = Math.floor(Math.random() * palavras.length);
+        let indice_2 = Math.floor(Math.random() * palavras.length);
+        while (indice_1 == indice_2){
+            indice_2 = Math.floor(Math.random() * palavras.length);  
+        }
+        return`A frase da sua camisa é: ${palavras[indice_1]} ${palavras[indice_2]} `
+    }
+    function BtnSortearOnclick(){
+        let frase = sorteia_frase();
+        document.getElementById('frase').innerHTML = frase;
+    }
+    </script>
+</body>
+</html>

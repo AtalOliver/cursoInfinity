@@ -1,56 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays</title>
+    <title>Aula funções</title>
 </head>
 <body>
     <script>
-        const frutas = ["abacaxi", "Manga", "Limão"];
-        console.log(frutas); //declarar no plural
-        console.log(frutas[0]);
-        console.log(frutas[1]);
 
-        frutas[2] = "uva";
-        console.log(frutas);
-        frutas.push = "canjirana" // adicionar alemento no final do arrays
-        console.log(frutas);
-
-        let fruta = frutas.pop(); // retirar um elemento no finbal do arrays
-        console.log(frutas);
-        console.log(fruta);
-
-        let p_fruta = frutas.shift();
-        console.log(p_fruta);
-
-        frutas.unshift(p_fruta);
-        console.log(frutas);
-
-        frutas.splice(1,1, "mangaba", "umbu") //Função bem util
-        console.log(frutas);
-        frutas.slice(2,1);
-        console.log(frutas)
-        frutas.slice(0,0, "tangerina");
-        console.log(frutas);
-
-        const sub_frutas = frutas.slice(1,2)
-        console.log(sub_frutas)
-
-        console.log(frutas.length)
-
-        for  (let i = 0; i < frutas.length; i++){
-            console.log(frutas[i]);
-        }
-//pouco utilizada
-        for (let f of frutas){
-            console.log(f)
+        function soma_numeros(a, b){
+            if (a == 0 || b == 0){
+                return 0;
+            }else{
+                let soma = a + b;
+                return soma;
+            }
         }
 
-        let nome = "Abracadabra"
-        for  (let i = 0; i < nome.length; i++){
-            console.log(nome[i]);
-        }
+        console.log(soma_numeros(3, 5))
+        let resultado = soma_numeros(10, 20) - soma_numeros(50, 100)
+        console.log(resultado)
+        console.log(soma_numeros(0, 15))
+
     </script>
 </body>
 </html>
