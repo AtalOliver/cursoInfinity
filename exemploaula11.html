@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade </title>
+</head>
+<body>
+    <script>
+        //const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+        // console.log(arr.join());
+        // console.log(arr.join(''));
+        // console.log(arr.join('#'));
+        // console.log(arr.join(' '));
+        // console.log(arr.join('-'));
+        // console.log(arr.join('</br>'));
+        // console.log('<li>' + arr.join('</li><li>') + '</li>');
+
+        // console.log(arr.slice(0, 3));
+        // console.log(arr.slice(2, 5));
+        // console.log(arr.slice(2, arr.length));
+
+        // //arr.splice(pos_de_trabalho, qtd_element_remover, itens_adicionar)
+        // arr.splice(3, 0, 'j')
+        // console.log(arr);
+        // arr.splice(3, 1)
+        // console.log(arr);
+
+
+        //const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+        // //Como fazer
+        // for (let i = 0; i < arr.length; i++){
+        //    console.log(arr[i]); 
+        // }
+
+        // for (letra of arr){
+        //     console.log(letra)
+        // }
+
+        // //Imperativa vs declarativa
+
+        // //arr.forEach(fn)
+        // //O que (qual o resultado quero alcançar)
+        // arr.forEach(letra => {
+        //     console.log(letra)
+        // });
+
+        // arr.forEach(function (letra) {
+        //     console.log(letra)
+        // });
+
+
+        
+        //const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+        // //map
+        // const modif = arr.map(function (item){
+        //     return '<li>' + item + '</li>'
+        // });
+        // console.log(modif);
+
+        // const arr2 = [5, 7, 2, 3, 8];
+
+        // //map
+        // const modif2 = arr2.map(function (item){
+        //     return item * 2
+        // });
+        // console.log(modif2);
+
+        //filter
+
+        //funcao declarada
+        // function fn(x){
+        //     return x
+        // }
+        //fn(10)
+
+        //funcao atribuida
+        // const fn = function (x){
+        //     return x
+        // }
+        // fn(10)
+
+        //arrow function
+        // const fn = (x) => {
+        //     return x;
+        // }
+        // const fn = x => x;
+        
+
+
+        // const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+        // const filtradas = arr.filter(item => !'aeiou'.includes(item));
+
+        // console.log(filtradas)
+
+        // const arr2 = [-5, 7, -2, 3, 8];
+
+        // const positivos = arr2.filter(function (n){
+        //     return n >= 0;
+        // });
+        // console.log(positivos)
+
+        const arr2 = [-5, 7, -2, 3, 8];
+
+        // let soma = 0;
+        // for (let i = 0; i < arr2.length; i++){
+        //     soma += arr2[i]
+        // }
+
+        let soma = arr2.reduce(function (soma, n){
+            return soma + n
+        });
+        console.log(soma)
+        let produto = arr2.reduce((produto, n) => {
+            return produto * n
+        });
+        console.log(produto)
+
+        let maior = -1000000;
+        for (let i = 0; i < arr2.length; i++){
+            if (arr2[i] > maior)
+                maior = arr2[i]
+        }
+
+        let maior2 = arr2.reduce(function (maior, n){
+            return maior > n ? maior : n;
+        });
+        console.log(maior2)
+
+
+    </script>
