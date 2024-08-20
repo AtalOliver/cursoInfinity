@@ -1,0 +1,16 @@
+body {
+    margin: auto;
+    padding: 0px;
+    width: 50%;
+    height: 600px;
+    border: .5px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.concluido {
+    color: darkgreen;
+    text-decoration:  line-through;
+
+}
