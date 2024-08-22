@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Arrays</title>
+   <link rel="stylesheet" href="estilo.css"> 
+
+</head>
+<body>
+
+<header>
+<h1>Tarefas da Familia Oliveira</h1> 
+</header>
+
+<section>
+
+ <div>
+<p>Tarefa: <input type="text" name="txtt" id="txtt"></p>
+<p>Responsável: <input type="text" name="txtr" id="txtr"></p>
+<p>Descrição: <input type="text" name="txtd" id="txtd"></p>
+
+ <p> Prazo: <input type="text" name="txtp" id="txtp"></p>
+
+
+<div id="prioridade">
+ <h4>Prioridade</h4>
+<p> <input type="radio" name="radpri" id="baixa" checked>
+<label for="baixa">Baixa</label>
+<input type="radio" name="radpri" id="media">
+<label for="media">Média </label>
+<input type="radio" name="radpri" id="alta">
+<label for="alta">Alta</label>
+</p>
+  
+</div>
+
+
+
+<p>
+    <input type="button" value="Incluir" onclick="incluir()">
+</p>
+ </section>
+
+
+ </div>
+
+
+
+ 
+ <div id="check"><br>
+    Lembrem-se de preencher o status das atividades inseridas.
+
+<ul id="textlist"></ul>
+
+    </div>
+       </section>
+    <br>
+       <footer>
+    <p>&copf; Gerenciador de Tarefas </p>
+    
+       </footer>
+
+       <script src="script.js"></script>
+</body>
+</html>
