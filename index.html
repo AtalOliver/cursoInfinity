@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula funções</title>
+    <title>Document</title>
 </head>
 <body>
+    <div>
+        <button id="btn">Buscar</button>
+    </div>
+    <div>
+        <img id="img" src="" alt="">
+    </div>
     <script>
 
-        function soma_numeros(a, b){
-            if (a == 0 || b == 0){
-                return 0;
-            }else{
-                let soma = a + b;
-                return soma;
-            }
+        async function buscar_api(){
+            const url = "https://dog.ceo/api/breeds/image/random";
+            // fetch(url)
+            // .then( response => {
+            //     return response.json();
+            // })
+            // .then(dados => {
+            //     console.log(dados);
+            // })
+            // .catch(error => {
+            //     console.log(error)
+            // })
+            // .finally( () => {
+            //     console.log("Terminou")
+            // })
+
+            //async e o await
+            try{
+                const response = await fetch(url)
+                const dados = await response.json()
+                console.log(dados);
+                exibir_imagem(dados["message"]);
+            }catch(e){
+                console.log(e)
+            }  
         }
 
-        console.log(soma_numeros(3, 5))
-        let resultado = soma_numeros(10, 20) - soma_numeros(50, 100)
-        console.log(resultado)
-        console.log(soma_numeros(0, 15))
+        function exibir_imagem(url_imagem){
+            document.querySelector('#img').src = url_imagem;
+        }
+
+        document.getElementById('btn').addEventListener('click', buscar_api);
 
     </script>
 </body>

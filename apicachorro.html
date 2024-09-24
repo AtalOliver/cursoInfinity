@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Raça: <select id="raca"></select>
+    </div>
+    <div>
+        Sub-raça: <select id="sub_raca"></select>
+    </div>
+    <div>
+        <button id="btn">Exibir Imagem</button>
+    </div>
+    <div>
+        <img id="img" src="#" width="250px" />
+    </div>
+
+    <script>
+        let dados;
+
+        async function carregar_racas(){
+            let url = 'https://dog.ceo/api/breeds/list/all';
+            try{
+                const response = await fetch(url);
+                dados = await response.json();
+                const racas = Object.keys(dados["message"]);
+                document.getElementById('raca').innerHTML = racas.map(item => {
+                return `<option value="${item}">${item}</option>`
+                } 
+            ).join('')
+            }catch(e){
+                console.log(e)
+            }
+            
+        }
+
+        function carregar_sub_racas(){
+            let raca = document.getElementById('raca').value;
+            const sub_racas = dados["message"][raca]
+            document.getElementById('sub_raca').innerHTML = sub_racas.map(item => {
+                return `<option value="${item}">${item}</option>`
+                } 
+            ).join('')
+        }
+
+        carregar_racas();
+
+        document.getElementById('raca').addEventListener('change', carregar_sub_racas)
+        
+    </script>
+
+</body>
+</html>
